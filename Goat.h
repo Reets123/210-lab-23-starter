@@ -1,8 +1,11 @@
+// Lab 22: Upgrade the DLL Class
+// COMSC-210 - Ibrahim Alatig 
 // Goat.h
 
 #ifndef GOAT_H
 #define GOAT_H
 #include <iostream>
+
 using namespace std;
 
 class Goat {

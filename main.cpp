@@ -1,8 +1,12 @@
+// Lab 22: Upgrade the DLL Class
+// COMSC-210 - Ibrahim Alatig 
+
 #include <iostream>
 #include <fstream>
 #include <iomanip>
 #include <list>
 #include "Goat.h"
+
 using namespace std;
 
 const int SZ_NAMES = 200, SZ_COLORS = 25, MAX_AGE = 20;
@@ -23,6 +27,7 @@ int main() {
     int i = 0;
     while (fin >> names[i++]);
     fin.close();
+    
     ifstream fin1("colors.txt");
     string colors[SZ_COLORS];
     i = 0;

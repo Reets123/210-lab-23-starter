@@ -31,6 +31,15 @@ public:
     string get_color() const { return color; }
 
     // write overloaded < operator for the std::list
+    bool operator<(const Goat& g) const {
+        return name < g.name; // Sort based on the name
+    }
+
+    // Function to format the goat information
+    friend ostream& operator<<(ostream& os, const Goat& goat) {
+        os << goat.name << " (" << goat.age << ", " << goat.color << ")";
+        return os;
+    }
 };
 
 #endif

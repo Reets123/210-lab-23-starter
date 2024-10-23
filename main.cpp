@@ -108,3 +108,14 @@ void delete_goat(list<Goat> &trip) {
         cout << "Invalid selection!" << endl;
         return;
     }
+
+    auto it = trip.begin();
+    advance(it, index);
+    trip.erase(it);
+    cout << "Goat deleted!" << endl;
+}
+
+int select_goat(list<Goat> &trip) {
+    int index = 0;
+    cout << "Select a goat:" << endl;
+    for (auto it = trip.

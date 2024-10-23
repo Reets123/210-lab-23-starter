@@ -118,4 +118,14 @@ void delete_goat(list<Goat> &trip) {
 int select_goat(list<Goat> &trip) {
     int index = 0;
     cout << "Select a goat:" << endl;
-    for (auto it = trip.
+    for (auto it = trip.begin(); it != trip.end(); ++it) {
+        cout << "[" << ++index << "] " << *it << endl;
+    }
+    int choice;
+    cin >> choice;
+
+    if (choice < 1 || choice > index) return -1; // Return -1 for invalid index
+    return choice - 1; // Convert to zero-based index
+}
+
+void display_trip(li

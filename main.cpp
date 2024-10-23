@@ -74,4 +74,21 @@ int main_menu() {
     cin >> choice;
 
     // Validate the user input
-    while(cin.fail()
+    while(cin.fail() || choice < 1 || choice > 4) {
+        cin.clear(); // Clear error flags
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
+        cout << "Invalid choice! Please try again: ";
+        cin >> choice;
+    }
+    
+    return choice;
+}
+
+void add_goat(list<Goat> &trip, string names[], string colors[]) {
+    string name = names[rand() % SZ_NAMES];
+    string color = colors[rand() % SZ_COLORS];
+    int age = rand() % (MAX_AGE + 1);
+
+    Goat newGoat(name, age, color);
+    trip.push_back(newGoat);
+    cout << "Added goat

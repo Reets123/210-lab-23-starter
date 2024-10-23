@@ -91,4 +91,20 @@ void add_goat(list<Goat> &trip, string names[], string colors[]) {
 
     Goat newGoat(name, age, color);
     trip.push_back(newGoat);
-    cout << "Added goat
+    cout << "Added goat: " << newGoat << endl;
+}
+
+void delete_goat(list<Goat> &trip) {
+    if (trip.empty()) {
+        cout << "No goats to delete!" << endl;
+        return;
+    }
+
+    display_trip(trip);
+    cout << "Select the number of the goat to delete: ";
+    int index = select_goat(trip);
+
+    if (index < 0) {
+        cout << "Invalid selection!" << endl;
+        return;
+    }

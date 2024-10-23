@@ -23,9 +23,9 @@ public:
     Goat(string n, int a, string c) : name(n), age(a), color(c) {} // Constructor with all parameters
 
     // setters and getters
-    void set_name(string n) { name = n; };
-    string get_name() const { return name; };
-    void set_age(int a) { age = a; };
+    void set_name(string n) { name = n; }
+    string get_name() const { return name; }
+    void set_age(int a) { age = a; }
     int get_age() const { return age; }
     void set_color(string c) { color = c; }
     string get_color() const { return color; }

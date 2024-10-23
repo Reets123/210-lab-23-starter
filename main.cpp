@@ -5,6 +5,8 @@
 #include <fstream>
 #include <iomanip>
 #include <list>
+#include <limits>
+#include <cstdlib>
 #include "Goat.h"
 
 using namespace std;
@@ -19,24 +21,34 @@ int main_menu();
 
 int main() {
     srand(static_cast<unsigned>(time(0)));
-    bool again;
+    bool again = true; 
 
     // read & populate arrays for names and colors
-    ifstream fin("names.txt");
+    fstream fin("names.txt");
     string names[SZ_NAMES];
+    if (!fin.is_open()) { // Check if file opens successfully
+        cerr << "Error opening names.txt" << endl;
+        return 1; // Exit or handle error accordingly
+    }
+    
     int i = 0;
-    while (fin >> names[i]); {
+    while (fin >> names[i] && i < SZ_NAMES) {
         i++;
     }
     fin.close();
     
     ifstream fin1("colors.txt");
     string colors[SZ_COLORS];
+    if (!fin1.is_open()) { // Check if file opens successfully
+        cerr << "Error opening colors.txt" << endl;
+        return 1; // Exit or handle error accordingly
+    }
+    
     i = 0;
-    while (fin >> names[i]); {
+    while (fin1 >> colors[i] && i < SZ_COLORS) { // Use fin1 for reading colors
         i++;
     }
-    fin.close();
+    fin1.close();
 
     list<Goat> trip; // List to manage goats
     do {

@@ -18,7 +18,7 @@ void display_trip(list<Goat> trip);
 int main_menu();
 
 int main() {
-    srand(static_cast<unsigned>time(0));
+    srand(static_cast<unsigned>(time(0)));
     bool again;
 
     // read & populate arrays for names and colors

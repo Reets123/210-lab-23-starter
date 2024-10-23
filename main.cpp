@@ -38,8 +38,27 @@ int main() {
     }
     fin.close();
 
-
-
+    list<Goat> trip; // List to manage goats
+    do {
+        int choice = main_menu();
+        switch (choice) {
+            case 1: 
+                add_goat(trip, names, colors); 
+                break;
+            case 2: 
+                delete_goat(trip); 
+                break;
+            case 3: 
+                display_trip(trip); 
+                break;
+            case 4: 
+                cout << "Goodbye!" << endl;
+                again = false;
+                break;
+            default:
+                cout << "Invalid choice! Please try again." << endl;
+        }
+    } while (again);
 
     return 0;
 }

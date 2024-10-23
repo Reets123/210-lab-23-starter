@@ -128,4 +128,14 @@ int select_goat(list<Goat> &trip) {
     return choice - 1; // Convert to zero-based index
 }
 
-void display_trip(li
+void display_trip(list<Goat> trip) {
+    if (trip.empty()) {
+        cout << "No goats in trip!" << endl;
+        return;
+    }
+
+    cout << "Current goats in the trip:" << endl;
+    for (const Goat& goat : trip) {
+        cout << goat << endl;
+    }
+}

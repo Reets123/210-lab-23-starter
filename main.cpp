@@ -1,4 +1,4 @@
-// Lab 22: Upgrade the DLL Class
+// Lab 23: Goat Manager 3001
 // COMSC-210 - Ibrahim Alatig 
 
 #include <iostream>

@@ -1,6 +1,26 @@
-// Lab 22: Upgrade the DLL Class
+// Lab 23: Goat Manager 3001
 // COMSC-210 - Ibrahim Alatig 
 // Goat.h
+
+//       Goat
+//-----------------
+// - name: string 
+// - age: int                         
+// - color: string                     
+//------------------
+// + Goat()                           
+// + Goat(n: string)                    
+// + Goat(n: string, a: int)            
+// + Goat(n: string, a: int, c: string) 
+// + set_name(n: string): void          
+// + get_name(): string                 
+// + set_age(a: int): void              
+// + get_age(): int                     
+// + set_color(c: string): void         
+// + get_color(): string                
+// + operator<(g: Goat): bool           
+// + friend operator<<(os: ostream&,    
+// + goat: Goat): ostream& 
 
 #ifndef GOAT_H
 #define GOAT_H
